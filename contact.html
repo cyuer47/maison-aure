@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Maison Auré</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-header">
+        <div class="logo">
+          <a href="/">
+            <img src="images/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <nav class="normal">
+          <a href="/">Home</a>
+          <a href="over-mij.html">Over Mij</a>
+          <a href="diensten.html">Diensten</a>
+          <a href="werkwijze.html">Werkwijze</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html" active>Contact</a>
+        </nav>
+
+        <button
+          commandfor="appointmentDialog"
+          command="show-modal"
+          class="header-btn"
+          id="openAppointment"
+        >
+          Plan een afspraak
+        </button>
+
+        <button class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <dialog id="appointmentDialog">
+        <div class="dialog-header">
+          <h2>Plan een kennismaking</h2>
+          <button
+            commandfor="appointmentDialog"
+            command="close"
+            id="closeAppointment"
+          >
+            <span class="material-symbols-sharp"> close </span>
+          </button>
+        </div>
+
+        <form
+          action="https://formsubmit.co/boxemivenruben@gmail.com"
+          method="post"
+          class="appointment-form"
+        >
+          <label>
+            Naam
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Telefoonnummer
+            <input type="tel" name="phone" required />
+          </label>
+          <label>
+            Waarmee kan ik helpen?
+            <select name="service">
+              <option>Interieuradvies</option>
+              <option>Compleet interieurplan</option>
+              <option>Kleuradvies</option>
+              <option>Styling</option>
+            </select>
+          </label>
+          <label>
+            Vertel iets over uw ruimte
+            <textarea
+              name="description"
+              placeholder="Bijvoorbeeld: woonkamer, slaapkamer, nieuw huis..."
+              rows="2"
+            ></textarea>
+          </label>
+          <label>
+            Wat zijn uw wensen?
+            <textarea
+              name="wishes"
+              placeholder="Wat wil u veranderen?"
+              rows="2"
+            ></textarea>
+          </label>
+          <label>
+            Heb je inspiratie?
+            <input
+              type="url"
+              name="inspiration"
+              placeholder="Pinterest, Instagram link..."
+            />
+          </label>
+          <label>
+            Budgetindicatie
+            <select name="budget">
+              <option>€500 - €1000</option>
+              <option>€1000 - €2500</option>
+              <option>€2500 - €5000</option>
+              <option>€5000+</option>
+            </select>
+          </label>
+          <label>
+            Gewenste periode
+            <input
+              type="text"
+              name="date"
+              placeholder="Bijvoorbeeld september 2026"
+            />
+          </label>
+          <button class="submit-btn">Aanvraag versturen</button>
+        </form>
+      </dialog>
+
+      <section class="page-header">
+        <p class="section-label">Contact</p>
+        <h1>Laten we <span>kennismaken</span></h1>
+        <p>
+          Heb je een vraag of wil je vrijblijvend sparren over jouw ruimte? Neem
+          gerust contact op, ik hoor graag van je.
+        </p>
+      </section>
+
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-info">
+            <h2>Contactgegevens</h2>
+            <p>
+              Je kunt me bereiken via telefoon, e-mail of het formulier
+              hiernaast. Meestal reageer ik binnen één werkdag.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <span class="material-symbols-sharp">call</span>
+                <div>
+                  <h4>Telefoon</h4>
+                  <p>06 12 34 56 78</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="material-symbols-sharp">mail</span>
+                <div>
+                  <h4>E-mail</h4>
+                  <p>info@maisonaure.nl</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="material-symbols-sharp">location_on</span>
+                <div>
+                  <h4>Locatie</h4>
+                  <p>Groningen, Groningen</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <a href="#" aria-label="Instagram">
+                <span class="material-symbols-sharp">photo_camera</span>
+              </a>
+              <a href="#" aria-label="Pinterest">
+                <span class="material-symbols-sharp">push_pin</span>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <span class="material-symbols-sharp">business_center</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <h3>Stuur een bericht</h3>
+            <form
+              action="https://formsubmit.co/boxemivenruben@gmail.com"
+              method="post"
+              class="appointment-form"
+            >
+              <label>
+                Naam
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                E-mail
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                Telefoonnummer
+                <input type="tel" name="phone" />
+              </label>
+              <label>
+                Bericht
+                <textarea
+                  name="message"
+                  placeholder="Waar kan ik je mee helpen?"
+                  rows="4"
+                  required
+                ></textarea>
+              </label>
+              <button class="submit-btn">Bericht versturen</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
