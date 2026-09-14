@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-header">
+        <div class="logo">
+          <a href="/">
+            <img src="images/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <nav class="normal">
+          <a href="/" active>Home</a>
+          <a href="over-mij.html">Over Mij</a>
+          <a href="diensten.html">Diensten</a>
+          <a href="werkwijze.html">Werkwijze</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <button
+          commandfor="appointmentDialog"
+          command="show-modal"
+          class="header-btn"
+          id="openAppointment"
+        >
+          Plan een afspraak
+        </button>
+
+        <button class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <dialog id="appointmentDialog">
+        <div class="dialog-header">
+          <h2>Plan een kennismaking</h2>
+
+          <button
+            commandfor="appointmentDialog"
+            command="close"
+            id="closeAppointment"
+          >
+            <span class="material-symbols-sharp"> close </span>
+          </button>
+        </div>
+
+        <form
+          action="https://formsubmit.co/boxemivenruben@gmail.com"
+          method="post"
+          class="appointment-form"
+        >
+          <label>
+            Naam
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Telefoonnummer
+            <input type="tel" name="phone" required />
+          </label>
+          <label>
+            Waarmee kan ik helpen?
+            <select name="service">
+              <option>Interieuradvies</option>
+              <option>Compleet interieurplan</option>
+              <option>Kleuradvies</option>
+              <option>Styling</option>
+            </select>
+          </label>
+          <label>
+            Vertel iets over uw ruimte
+            <textarea
+              name="description"
+              placeholder="Bijvoorbeeld: woonkamer, slaapkamer, nieuw huis..."
+              rows="2"
+            ></textarea>
+          </label>
+          <label>
+            Wat zijn uw wensen?
+            <textarea
+              name="wishes"
+              placeholder="Wat wil u veranderen?"
+              rows="2"
+            ></textarea>
+          </label>
+          <label>
+            Heb je inspiratie?
+            <input
+              type="url"
+              name="inspiration"
+              placeholder="Pinterest, Instagram link..."
+            />
+          </label>
+          <label>
+            Budgetindicatie
+            <select name="budget">
+              <option>€500 - €1000</option>
+
+              <option>€1000 - €2500</option>
+
+              <option>€2500 - €5000</option>
+
+              <option>€5000+</option>
+            </select>
+          </label>
+          <label>
+            Gewenste periode
+            <input
+              type="text"
+              name="date"
+              placeholder="Bijvoorbeeld september 2026"
+            />
+          </label>
+          <button class="submit-btn">Aanvraag versturen</button>
+        </form>
+      </dialog>
+
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-subtitle">Interieurontwerp & styling</p>
+
+          <h1>Een interieur dat <span>bij jou past</span></h1>
+          <p class="hero-text">
+            Ik ontwerp persoonlijke ruimtes waarin functionaliteit, sfeer en
+            jouw eigen stijl samenkomen.
+          </p>
+          <div class="hero-buttons">
+            <button
+              commandfor="appointmentDialog"
+              command="show-modal"
+              class="btn-primary"
+            >
+              Plan een afspraak
+            </button>
+            <button class="btn-secondary showPortfolioButton">
+              Bekijk portfolio
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro">
+        <div class="container">
+          <div class="intro-text">
+            <p class="section-label">Over mijn aanpak</p>
+            <h2>Een interieur waarin jij je thuis voelt</h2>
+            <p>
+              Een mooi interieur gaat verder dan alleen meubels en kleuren. Het
+              gaat om een ruimte die past bij jouw leven, persoonlijkheid en
+              wensen.
+            </p>
+            <a href="over-mij.html" class="text-link"
+              >Meer over mij
+              <span class="material-symbols-sharp"> arrow_forward </span></a
+            >
+          </div>
+
+          <div class="intro-image">
+            <img
+              src="https://interior-design-assistant.replit.app/images/kirsten-portrait.png"
+              alt="Interieur"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="diensten">
+        <div class="container">
+          <div class="services-header">
+            <p class="section-label">Diensten</p>
+
+            <h2>Persoonlijke interieurontwerpen die bij jou passen</h2>
+
+            <p>
+              Van een klein interieuradvies tot een compleet ontwerptraject.
+              Samen creëren we een ruimte die past bij jouw wensen, stijl en
+              manier van leven.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <span> 01 </span>
+
+              <h3>Interieuradvies</h3>
+
+              <p>
+                Persoonlijk advies om jouw ruimte meer sfeer, balans en karakter
+                te geven. We kijken samen naar indeling, kleuren en materialen.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span> 02 </span>
+
+              <h3>Compleet interieurplan</h3>
+
+              <p>
+                Een volledig uitgewerkt interieurconcept met kleuren,
+                materialen, meubels en een passend ontwerp voor jouw woning.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span> 03 </span>
+
+              <h3>Kleuradvies</h3>
+
+              <p>
+                De juiste kleuren zorgen voor rust, warmte en samenhang. Ik help
+                je de perfecte kleurencombinaties te vinden.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span> 04 </span>
+
+              <h3>Styling & inrichting</h3>
+
+              <p>
+                De laatste details maken het verschil. Samen zorgen we voor
+                accessoires, meubels en sfeer die bij jou passen.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span> 05 </span>
+
+              <h3>Nieuwbouw begeleiding</h3>
+
+              <p>
+                Hulp bij keuzes rondom een nieuwe woning, zoals indeling,
+                materialen, verlichting en de totale sfeer.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <span> 06 </span>
+
+              <h3>Zakelijk interieur</h3>
+
+              <p>
+                Een professionele ruimte ontwerpen die past bij jouw bedrijf,
+                merk en bezoekers.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="steps">
+        <div class="step">
+          <span>01</span>
+          <h3>Kennismaking</h3>
+          <p>We bespreken jouw wensen, stijl en mogelijkheden.</p>
+        </div>
+        <div class="step">
+          <span>02</span>
+          <h3>Ontwerp</h3>
+          <p>Ik werk een persoonlijk interieurconcept uit.</p>
+        </div>
+        <div class="step">
+          <span>03</span>
+          <h3>Realisatie</h3>
+          <p>Samen brengen we het ontwerp tot leven.</p>
+        </div>
+      </section>
+      <section class="portfolio">
+        <div class="portfolio-grid">
+          <article>
+            <img src="https://placehold.co/600x400" alt="" />
+            <div>
+              <h3>Moderne woonkamer</h3>
+              <p>Rustige materialen en warme tinten.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="reviews">
+        <h2>Wat klanten zeggen</h2>
+        <div class="review-card">
+          <p>"Vanaf het eerste gesprek voelde het ontwerp helemaal als ons."</p>
+          <strong>- Henk</strong>
+        </div>
+      </section>
+      <section class="cta">
+        <h2>Klaar om jouw droominterieur te creëren?</h2>
+        <button
+          commandfor="appointmentDialog"
+          command="show-modal"
+          class="btn-primary"
+        >
+          Plan een afspraak
+        </button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
