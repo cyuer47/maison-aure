@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Werkwijze - Maison Auré</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-header">
+        <div class="logo">
+          <a href="/">
+            <img src="images/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <nav class="normal">
+          <a href="/">Home</a>
+          <a href="over-mij.html">Over Mij</a>
+          <a href="diensten.html">Diensten</a>
+          <a href="werkwijze.html" active>Werkwijze</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <button
+          commandfor="appointmentDialog"
+          command="show-modal"
+          class="header-btn"
+          id="openAppointment"
+        >
+          Plan een afspraak
+        </button>
+
+        <button class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <dialog id="appointmentDialog">
+        <div class="dialog-header">
+          <h2>Plan een kennismaking</h2>
+          <button
+            commandfor="appointmentDialog"
+            command="close"
+            id="closeAppointment"
+          >
+            <span class="material-symbols-sharp"> close </span>
+          </button>
+        </div>
+
+        <form
+          action="https://formsubmit.co/boxemivenruben@gmail.com"
+          method="post"
+          class="appointment-form"
+        >
+          <label>
+            Naam
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Telefoonnummer
+            <input type="tel" name="phone" required />
+          </label>
+          <label>
+            Waarmee kan ik helpen?
+            <select name="service">
+              <option>Interieuradvies</option>
+              <option>Compleet interieurplan</option>
+              <option>Kleuradvies</option>
+              <option>Styling</option>
+            </select>
+          </label>
+          <label>
+            Vertel iets over uw ruimte
+            <textarea
+              name="description"
+              placeholder="Bijvoorbeeld: woonkamer, slaapkamer, nieuw huis..."
+              rows="2"
+            ></textarea>
+          </label>
+          <label>
+            Wat zijn uw wensen?
+            <textarea
+              name="wishes"
+              placeholder="Wat wil u veranderen?"
+              rows="2"
+            ></textarea>
+          </label>
+          <label>
+            Heb je inspiratie?
+            <input
+              type="url"
+              name="inspiration"
+              placeholder="Pinterest, Instagram link..."
+            />
+          </label>
+          <label>
+            Budgetindicatie
+            <select name="budget">
+              <option>€500 - €1000</option>
+              <option>€1000 - €2500</option>
+              <option>€2500 - €5000</option>
+              <option>€5000+</option>
+            </select>
+          </label>
+          <label>
+            Gewenste periode
+            <input
+              type="text"
+              name="date"
+              placeholder="Bijvoorbeeld september 2026"
+            />
+          </label>
+          <button class="submit-btn">Aanvraag versturen</button>
+        </form>
+      </dialog>
+
+      <section class="page-header">
+        <p class="section-label">Werkwijze</p>
+        <h1>Zo werken <span>we samen</span></h1>
+        <p>
+          Duidelijkheid en samenwerking staan centraal. In drie overzichtelijke
+          stappen ga je van eerste idee naar een interieur dat volledig bij jou
+          past.
+        </p>
+      </section>
+
+      <div class="werkwijze-intro">
+        <p>
+          Elk traject begint met luisteren. Pas als ik weet hoe jij leeft, waar
+          je van houdt en wat je nodig hebt, ga ik aan de slag met een ontwerp.
+          Zo blijft het resultaat persoonlijk, praktisch en volledig van jou.
+        </p>
+      </div>
+
+      <section class="steps">
+        <div class="step">
+          <span>1</span>
+          <h3>Kennismaking</h3>
+          <p>
+            Tijdens een vrijblijvend gesprek bespreken we jouw wensen, stijl en
+            mogelijkheden. Ik kom langs of we spreken online af, wat jij prettig
+            vindt.
+          </p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <h3>Ontwerp</h3>
+          <p>
+            Ik werk een persoonlijk interieurconcept uit met moodboards,
+            kleuradvies en een plattegrond. Samen bekijken we het ontwerp en
+            stellen we bij waar nodig.
+          </p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <h3>Realisatie</h3>
+          <p>
+            Samen brengen we het ontwerp tot leven. Ik begeleid de inkoop en
+            styling, zodat jij zonder zorgen kunt genieten van je nieuwe
+            interieur.
+          </p>
+        </div>
+      </section>
+
+      <section class="cta">
+        <h2>Klaar voor de eerste stap?</h2>
+        <button
+          commandfor="appointmentDialog"
+          command="show-modal"
+          class="btn-primary"
+        >
+          Plan een afspraak
+        </button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
